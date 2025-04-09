@@ -2,7 +2,7 @@
 
 SOURCE_DIR="./SWE_2021_41_2025_1_week_6-main/files"
 
-moved_count=0
+counter=0
 for file in "$SOURCE_DIR"/*; do
   if [ -f "$file" ]; then  
     filename=$(basename "$file")
@@ -14,7 +14,7 @@ for file in "$SOURCE_DIR"/*; do
 
     if [ ! "$(dirname "$file")" = "$target_dir" ]; then
       mv -v "$file" "$target_dir/"
-      ((moved_count++))
+      ((counter++))
     fi
   fi
 done
